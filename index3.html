@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <p id="texto">JavaScript pode fazer mágica.</p>
+
+    <button type="button"
+    onclick="document.getElementById('texto').style.display='none'">
+    Faça o texto desaparecer</button>
+
+    <p id="demo">Clique no botão!</p>
+
+    <button type="button"
+    onclick='document.getElementById("demo").innerHTML = "Oioioi S2"'>
+    Me aperte! </button><br><br><br><br><br>
+
+    <button onclick="document.getElementById('cachorro').src='feliz.jpg'">
+    Acalme o cachorro</button>
+
+    <img id="cachorro" src="bravo.jpg" style="width=30 height=30">
+
+    <button onclick="document.getElementById('cachorro').src='bravo.jpg'">
+    Irrite o cachorro</button><br><br><br><br><br>
+
+    <script>
+        alert(20*2)
+    </script>
+    <p id="soma"></p>
+    <script>document.getElementById("soma").innerHTML = 20 * 2;</script>
+    
+    <p id="carro"></p>
+    <script>
+    var carName = "Jeep";
+    var car = {
+        marca:"Jeep", modelo:"Trooler", cor:"Preto" };
+    document.getElementById("carro").innerHTML = carName;
+    </script>
+
+    <script>
+    var x = minhaFuncao(4, 3);
+    function minhaFuncao(num1, num2) { return num1 * num2; }
+    </script>
+
+    <script>
+    function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32); }
+    document.getElementById("demo").innerHTML = toCelsius(42);
+    </script>
+   
+   <p id="saudacao"></p>
+   <script>
+   var saudacao;
+   var hora = new Date().getHours();
+   if (hora <= 9) {
+   saudacao = "Hora do café da manhã!";
+   } else if (hora <= 13) {
+   saudacao = "Hora do almoço!";
+   } else if (hora <= 18) {
+   saudacao = "Hora do café da tarde!";
+   } else if (hora > 18) {
+   saudacao = "Hora da janta!";
+   }
+   document.getElementById("saudacao").innerHTML = saudacao;
+</script>
+
+</body>
+</html>
